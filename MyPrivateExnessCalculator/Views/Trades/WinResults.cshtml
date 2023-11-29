@@ -1,0 +1,136 @@
+﻿@model IEnumerable<MyPrivateExnessCalculator.Models.Trade>
+
+@{
+    ViewBag.Title = "WinResults";
+}
+
+<h2>Win Results <label style="font-size:large">
+    (No of wins: @ViewBag.Count) 
+    
+        <tr>
+            <td>Total</td>
+            <td>R @Model.Sum(i => i.Gain)</td>
+        </tr>
+   
+</label>
+</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pair)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Entry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StopLoss)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StopLossPoints)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PipValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OnePipette)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Margin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MinLot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FinalLot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StopLossValue)
+        </th>
+
+
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.Results)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gain)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pair)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Entry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StopLoss)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StopLossPoints)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PipValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OnePipette)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Margin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinLot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinalLot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StopLossValue)
+            </td>
+
+
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Results)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gain)
+            </td>
+            <td>
+                @Html.ActionLink("Update Gain", "WinUpdate", new { id = item.TradeId }, new { @class = "btn btn-success" })|
+                @Html.ActionLink("Delete", "Delete", new { id = item.TradeId })
+
+                @*|
+        @Html.ActionLink("Details", "Details", new { id = item.TradeId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.TradeId })*@
+            </td>
+        </tr>
+        @*<tfoot>
+            <tr>
+                <td>Total</td>
+                <td>@Model.Sum(i => i.Gain)</td>
+            </tr>
+        </tfoot>*@
+     }
+
+    </table>

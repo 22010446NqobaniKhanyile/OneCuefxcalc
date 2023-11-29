@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MyPrivateExnessCalculator.Models.Chart>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Charts</h2>
+
+<p>
+    @Html.ActionLink("Add chart (screenshot)", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Pair)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pair)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            <img src="@Url.Content(item.ImagePath)" width="300" height="150" multiple />
+        </td>
+        <td>
+           
+            @Html.ActionLink("Remove", "Delete", new { id=item.ChartID }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>
+<div>
+    @Html.ActionLink("Record new trade", "Index", "Trades")
+</div>

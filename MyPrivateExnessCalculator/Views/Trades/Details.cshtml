@@ -1,0 +1,146 @@
+﻿@model MyPrivateExnessCalculator.Models.Trade
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Trade</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pair)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pair)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Entry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Entry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StopLoss)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StopLoss)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StopLossPoints)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StopLossPoints)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PipValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PipValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OnePipette)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OnePipette)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Margin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Margin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinLot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinLot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinalLot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinalLot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StopLossValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StopLossValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Results)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Results)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HitStop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HitStop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gain)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Loss)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Loss)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TradeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

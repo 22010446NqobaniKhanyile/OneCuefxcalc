@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/oneprivateexnesscalculatordbserver/databases/OnePrivateExnessCalculator_db",
+      "type": "mssql.azure",
+      "connectionId": "defaultconnection",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
